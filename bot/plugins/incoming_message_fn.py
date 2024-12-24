@@ -84,7 +84,7 @@ async def incoming_start_message_f(bot, update):
             await bot.send_message(
                 chat_id=update.chat.id,
                 text="Something went Wrong. Contact my [Support Group](https://t.me/hackelite01).",
-                parse_mode="markdown"
+                
                 disable_web_page_preview=True)
             return
     await bot.send_message(
@@ -411,7 +411,7 @@ async def incoming_compress_message_f(bot, update):
       bst_now = utc_now + datetime.timedelta(minutes=00, hours=6)
       bst = bst_now.strftime("%d/%m/%Y, %H:%M:%S")
       now = f"\n{ist} (GMT+05:30)`\n`{bst} (GMT+06:00)"
-      await bot.send_message(chat_id, f"**Download Error, Bot is Free Now !!** \n\nProcess Done at `{now}`", parse_mode="markdown")
+      await bot.send_message(chat_id, f"**Download Error, Bot is Free Now !!** \n\nProcess Done at `{now}`")
       await download_start.delete()
     except:
       pass
